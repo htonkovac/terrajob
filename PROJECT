@@ -6,4 +6,14 @@ plugins:
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: terrajob
 repo: github.com/htonkovac/terrajob
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: terrajob.htonkovac.com
+  group: terraform
+  kind: TerraJob
+  path: github.com/htonkovac/terrajob/api/v1alpha1
+  version: v1alpha1
 version: "3"

@@ -1,0 +1,27 @@
+# permissions for end users to view terrajobs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: terrajob-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: terrajob
+    app.kubernetes.io/part-of: terrajob
+    app.kubernetes.io/managed-by: kustomize
+  name: terrajob-viewer-role
+rules:
+- apiGroups:
+  - terraform.terrajob.htonkovac.com
+  resources:
+  - terrajobs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - terraform.terrajob.htonkovac.com
+  resources:
+  - terrajobs/status
+  verbs:
+  - get

@@ -1,0 +1,12 @@
+apiVersion: terraform.terrajob.htonkovac.com/v1alpha1
+kind: TerraJob
+metadata:
+  labels:
+    app.kubernetes.io/name: terrajob
+    app.kubernetes.io/instance: terrajob-sample
+    app.kubernetes.io/part-of: terrajob
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: terrajob
+  name: terrajob-sample
+spec:
+  # TODO(user): Add fields here
